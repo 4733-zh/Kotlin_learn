@@ -10,6 +10,9 @@ fun main(){
     for (i in 10 downTo 1){
         println(i)
     }
+
+    val p = Person("Jack",19)
+    p.eat()
 }
 //fun largerNumber(num1:Int,num2: Int)= max(num1,num2)
 fun largerNumber(num1:Int,num2:Int)= if (num1>num2)num1 else num2
