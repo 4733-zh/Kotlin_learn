@@ -31,3 +31,4 @@ rootProject.name = "Kotlin_learn"
 include(":app")
 include(":demo1")
 include(":lambdalearn")
+include(":nulltest")
