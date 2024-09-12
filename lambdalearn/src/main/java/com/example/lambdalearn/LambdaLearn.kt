@@ -23,17 +23,17 @@ fun main(){
     val anyResult = list.any { it.length<=5 }
     val allResult = list.all { it.length<=5 }
     println("anyResult is "+anyResult+",allResult is "+allResult)
-    val button=Button(this)
-
-
-    button.setOnClickListener {
-    println("test")
-}
-    button.setOnClickListener(object : View.OnClickListener {
-    override fun onClick(view: View?) {
-        println("test")
-    }
-})
+////    val button=Button(this)
+//
+//
+//    button.setOnClickListener {
+//    println("test")
+//}
+//    button.setOnClickListener(object : View.OnClickListener {
+//    override fun onClick(view: View?) {
+//        println("test")
+//    }
+//})
 
 
 

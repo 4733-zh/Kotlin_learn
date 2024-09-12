@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/demo1" />
             <option value="$PROJECT_DIR$/lambdalearn" />
+            <option value="$PROJECT_DIR$/nulltest" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
