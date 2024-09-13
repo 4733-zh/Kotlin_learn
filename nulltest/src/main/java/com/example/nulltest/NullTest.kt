@@ -5,7 +5,7 @@ var content:String?="hello"
 fun main(){
 //    doStudy(null)
 
-    printParams(1)
+    printParams(string = "HEE")
 
 //    if (content!=null){
 //        printUpperCase()
@@ -17,8 +17,8 @@ fun main(){
 //    study?.doHomework()
 //}
 
-fun printParams(num:Int?){
-    println(num)
+fun printParams(num:Int? = 2,string: String){
+    println("num is $num,string is $string")
 }
 
 
