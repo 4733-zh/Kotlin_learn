@@ -1,14 +1,15 @@
 package com.example.nulltest
 
-import com.example.demo1.Study
 var content:String?="hello"
 
 fun main(){
-    doStudy(null)
+//    doStudy(null)
 
-    if (content!=null){
-        printUpperCase()
-    }
+    printParams(1)
+
+//    if (content!=null){
+//        printUpperCase()
+//    }
 }
 
 //fun doStudy(study: Study?) {
@@ -16,12 +17,10 @@ fun main(){
 //    study?.doHomework()
 //}
 
-fun doStudy(study: Study?){
-    study?.let{
-        it.readBooks()
-        it.doHomework()
-    }
+fun printParams(num:Int?){
+    println(num)
 }
+
 
 fun getTextLength(text:String?)= text?.length?:0
 
