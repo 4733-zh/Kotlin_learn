@@ -36,7 +36,8 @@ class FirstActivity : AppCompatActivity() {
 //        button1.setOnClickListener{
 //            Toast.makeText(this,"You clicked Button 1",Toast.LENGTH_LONG).show()
         binding.button1.setOnClickListener{
-            Toast.makeText(this,"You clicked Button 1",Toast.LENGTH_LONG).show()
+//            Toast.makeText(this,"You clicked Button 1",Toast.LENGTH_LONG).show()
+            finish()
         }
 
     }
