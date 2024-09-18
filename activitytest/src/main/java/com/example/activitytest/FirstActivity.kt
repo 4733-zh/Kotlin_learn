@@ -1,5 +1,6 @@
 package com.example.activitytest
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -37,7 +38,14 @@ class FirstActivity : AppCompatActivity() {
 //            Toast.makeText(this,"You clicked Button 1",Toast.LENGTH_LONG).show()
         binding.button1.setOnClickListener{
 //            Toast.makeText(this,"You clicked Button 1",Toast.LENGTH_LONG).show()
-            finish()
+//            finish()
+
+//            val intent = Intent(this,SecondActivity::class.java)
+//            startActivity(intent)//显示intent
+
+            val intent = Intent("com.example.activitytest.ACTION_START")
+            intent.addCategory("com.example.activitytest.MY_CATEGORY")
+            startActivity(intent)
         }
 
     }

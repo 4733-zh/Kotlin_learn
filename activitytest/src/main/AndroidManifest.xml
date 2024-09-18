@@ -9,14 +9,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin_learn">
         <activity
-            android:name=".FirstActivity"
-            android:label="This is FirstActivity"
-            android:exported="true" >
+            android:name=".SecondActivity"
+            android:exported="false" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="com.example.activitytest.ACTION_START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.example.activitytest.MY_CATEGORY"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:exported="true"
+            android:label="This is FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
