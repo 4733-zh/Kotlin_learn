@@ -47,8 +47,11 @@ class FirstActivity : AppCompatActivity() {
 //            val intent = Intent("com.example.activitytest.ACTION_START")
 //            intent.addCategory("com.example.activitytest.MY_CATEGORY")
 
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://www.baidu.com")
+//            val intent = Intent(Intent.ACTION_VIEW)
+//            intent.data = Uri.parse("https://www.baidu.com")
+
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:10086")
             startActivity(intent)
         }
 
