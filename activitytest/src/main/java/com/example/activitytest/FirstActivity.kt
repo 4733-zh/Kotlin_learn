@@ -1,16 +1,13 @@
 package com.example.activitytest
 
 import android.content.Intent
-import android.net.Uri
+
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.activitytest.databinding.FirstLayoutBinding
 
 class FirstActivity : AppCompatActivity() {
@@ -28,6 +25,7 @@ class FirstActivity : AppCompatActivity() {
         }
         return true
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,10 +48,21 @@ class FirstActivity : AppCompatActivity() {
 //            val intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("https://www.baidu.com")
 
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:10086")
-            startActivity(intent)
+//            val intent = Intent(Intent.ACTION_DIAL)
+//            intent.data = Uri.parse("tel:10086")
+//            startActivity(intent)
+            val intent = Intent(this,SecondActivity::class.java)
+            startActivityForResult(intent,1)
         }
-
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when(requestCode){
+            1->if (resultCode == RESULT_OK){
+                val returnedData = data?.getStringExtra("data_return")
+                Log.d("FirstActivity","returned data is $returnedData")
+            }
+        }
+    }
+
 }
