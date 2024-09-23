@@ -23,6 +23,18 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,DialogActivity::class.java)
             startActivity(intent)
         }
+        if (savedInstanceState!=null){
+            val tempData =savedInstanceState.getString("data_key")
+            if (tempData != null) {
+                Log.d(tag,tempData)
+            }
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        val tempData = "Something you just typed"
+        outState.putString("data_key",tempData)
     }
 
     override fun onStart() {
