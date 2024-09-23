@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.activitytest.databinding.FirstLayoutBinding
 
-class FirstActivity : AppCompatActivity() {
+class FirstActivity : BaseActivity() {
     private lateinit var binding: FirstLayoutBinding
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
