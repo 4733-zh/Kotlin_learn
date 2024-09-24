@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.button1.setOnClickListener(this)
         binding.button2.setOnClickListener(this)
         binding.button3.setOnClickListener(this)
+        binding.button4.setOnClickListener(this)
 
     }
     override fun onClick(v: View?) {
@@ -39,6 +41,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //                    binding.progressBar.visibility = View.VISIBLE
 //                }
                 binding.progressBar.progress = binding.progressBar.progress + 10
+            }
+            R.id.button4->{
+                AlertDialog.Builder(this).apply {
+                    setTitle("This is Dialog")
+                    setMessage("Something important")
+                    setCancelable(false)
+                    setPositiveButton("OK"){dialog,which->}
+                    setNegativeButton("Cancel"){dialog,which->}
+                    show()
+
+                }
+
             }
         }
     }
