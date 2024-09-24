@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
         binding.button1.setOnClickListener(this)
         binding.button2.setOnClickListener(this)
+        binding.button3.setOnClickListener(this)
 
     }
     override fun onClick(v: View?) {
@@ -30,6 +31,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button2->{
                 binding.imageView.setImageResource(R.drawable.img_2)
+            }
+            R.id.button3->{
+//                if (binding.progressBar.visibility == View.VISIBLE) {
+//                    binding.progressBar.visibility = View.GONE
+//                }else{
+//                    binding.progressBar.visibility = View.VISIBLE
+//                }
+                binding.progressBar.progress = binding.progressBar.progress + 10
             }
         }
     }
